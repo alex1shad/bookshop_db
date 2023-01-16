@@ -5,7 +5,7 @@ import models as m
 
 
 with open('user_info.json', 'r') as user_file, open('fixtures/tests_data.json', 'r') as data_file:
-    db_type, login, password, hostname, db_port, db_name =  json.load(user_file).values()
+    db_type, login, password, hostname, db_port, db_name = json.load(user_file).values()
     book_data = json.load(data_file)
 
 DSN = f'{db_type}://{login}:{password}@{hostname}:{db_port}/{db_name}'
